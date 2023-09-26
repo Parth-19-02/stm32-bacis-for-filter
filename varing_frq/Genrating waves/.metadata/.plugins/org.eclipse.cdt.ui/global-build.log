@@ -1,0 +1,33 @@
+16:22:59 **** Incremental Build of configuration Debug for project dac_sin ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../Core/Src/main.c:90:28: warning: variable 'sine_val' set but not used [-Wunused-but-set-variable]
+   90 |                   uint32_t sine_val[Sample_value];
+      |                            ^~~~~~~~
+../Core/Src/main.c:110:28: warning: variable 'sine_val' set but not used [-Wunused-but-set-variable]
+  110 |                   uint32_t sine_val[Sample_value];
+      |                            ^~~~~~~~
+../Core/Src/main.c:130:28: warning: variable 'sine_val' set but not used [-Wunused-but-set-variable]
+  130 |                   uint32_t sine_val[Sample_value];
+      |                            ^~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:184:1: warning: implicit declaration of function 'get_sineval' [-Wimplicit-function-declaration]
+  184 | get_sineval();
+      | ^~~~~~~~~~~
+../Core/Src/main.c:185:43: error: 'sine_val' undeclared (first use in this function)
+  185 |   HAL_DAC_Start_DMA(&hdac, DAC_CHANNEL_1, sine_val, Sample_value, DAC_ALIGN_12B_R);
+      |                                           ^~~~~~~~
+../Core/Src/main.c:185:43: note: each undeclared identifier is reported only once for each function it appears in
+At top level:
+../Core/Src/main.c:133:24: warning: 'get_sineval' defined but not used [-Wunused-function]
+  133 |                   void get_sineval()
+      |                        ^~~~~~~~~~~
+../Core/Src/main.c:113:24: warning: 'get_sineval' defined but not used [-Wunused-function]
+  113 |                   void get_sineval()
+      |                        ^~~~~~~~~~~
+../Core/Src/main.c:93:24: warning: 'get_sineval' defined but not used [-Wunused-function]
+   93 |                   void get_sineval()
+      |                        ^~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.

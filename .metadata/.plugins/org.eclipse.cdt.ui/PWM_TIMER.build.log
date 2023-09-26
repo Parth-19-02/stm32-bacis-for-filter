@@ -1,0 +1,10 @@
+23:18:01 **** Incremental Build of configuration Debug for project PWM_TIMER ****
+make -j8 all 
+arm-none-eabi-size   PWM_TIMER.elf 
+   text	   data	    bss	    dec	    hex	filename
+  37556	    152	   3760	  41468	   a1fc	PWM_TIMER.elf
+Finished building: default.size.stdout
+ 
+
+23:18:02 Build Finished. 0 errors, 0 warnings. (took 889ms)
+

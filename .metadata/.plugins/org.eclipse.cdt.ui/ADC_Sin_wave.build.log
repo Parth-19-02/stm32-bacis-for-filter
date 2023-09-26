@@ -1,0 +1,10 @@
+15:39:58 **** Incremental Build of configuration Debug for project ADC_SIN_WAVE ****
+make -j8 all 
+arm-none-eabi-size   ADC_SIN_WAVE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18884	     20	   2156	  21060	   5244	ADC_SIN_WAVE.elf
+Finished building: default.size.stdout
+ 
+
+15:39:59 Build Finished. 0 errors, 0 warnings. (took 673ms)
+

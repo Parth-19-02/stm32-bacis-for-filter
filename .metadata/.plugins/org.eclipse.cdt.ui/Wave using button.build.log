@@ -1,0 +1,10 @@
+16:30:48 **** Build of configuration Debug for project Wave using button ****
+make -j8 all 
+arm-none-eabi-size   Wave\ using\ button.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7852	     20	   1644	   9516	   252c	Wave using button.elf
+Finished building: default.size.stdout
+ 
+
+16:30:49 Build Finished. 0 errors, 0 warnings. (took 1s.68ms)
+

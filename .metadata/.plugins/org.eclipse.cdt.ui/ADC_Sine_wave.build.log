@@ -1,0 +1,58 @@
+11:52:51 **** Incremental Build of configuration Debug for project ADC_Sine_wave ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Inc/arm_math.h:280,
+                 from ../Core/Src/main.c:22:
+../Core/Inc/core_cm3.h:76: warning: "__CORTEX_M" redefined
+   76 | #define __CORTEX_M                (0x03)                                   /*!< Cortex-M Core                    */
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h:166,
+                 from ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:132,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:29,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f4xx_hal_conf.h:275,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Core/Inc/core_cm4.h:76: note: this is the location of the previous definition
+   76 | #define __CORTEX_M                (0x04)                                   /*!< Cortex-M Core                    */
+      | 
+In file included from ../Core/Inc/arm_math.h:280,
+                 from ../Core/Src/main.c:22:
+../Core/Inc/core_cm3.h:107: warning: "__FPU_USED" redefined
+  107 | #define __FPU_USED       0
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h:166,
+                 from ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:132,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:29,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f4xx_hal_conf.h:275,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Core/Inc/core_cm4.h:146: note: this is the location of the previous definition
+  146 |       #define __FPU_USED       1
+      | 
+In file included from ../Core/Inc/arm_math.h:280,
+                 from ../Core/Src/main.c:22:
+../Core/Inc/core_cm3.h:126:6: warning: #warning "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)" [-Wcpp]
+  126 |     #warning "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+      |      ^~~~~~~
+In file included from ../Core/Src/main.c:22:
+../Core/Inc/arm_math.h:281:2: warning: #warning "Define either ARM_MATH_CM4 OR ARM_MATH_CM3...By Default building on ARM_MATH_CM4....." [-Wcpp]
+  281 | #warning "Define either ARM_MATH_CM4 OR ARM_MATH_CM3...By Default building on ARM_MATH_CM4....."
+      |  ^~~~~~~
+arm-none-eabi-gcc -o "ADC_Sine_wave.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Internship\ADC_Sine_wave\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADC_Sine_wave.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADC_Sine_wave.elf
+ 
+arm-none-eabi-size   ADC_Sine_wave.elf 
+arm-none-eabi-objdump -h -S  ADC_Sine_wave.elf  > "ADC_Sine_wave.list"
+   text	   data	    bss	    dec	    hex	filename
+  37652	    488	   1768	  39908	   9be4	ADC_Sine_wave.elf
+Finished building: default.size.stdout
+ 
+Finished building: ADC_Sine_wave.list
+ 
+
+11:52:52 Build Finished. 0 errors, 4 warnings. (took 1s.382ms)
+

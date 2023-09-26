@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;sine_wave/dac_sin.ioc&apos; to &apos;sine_wave.ioc&apos;" description="Rename resource &apos;dac_sin.ioc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="dac_sin.ioc" name="sine_wave.ioc" stamp="1691561047740" updateReferences="true"/>
+</session>

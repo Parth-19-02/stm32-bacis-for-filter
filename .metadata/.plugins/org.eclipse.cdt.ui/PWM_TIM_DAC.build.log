@@ -1,0 +1,10 @@
+11:07:06 **** Incremental Build of configuration Debug for project PWM_TIM_DAC ****
+make -j8 all 
+arm-none-eabi-size   PWM_TIM_DAC.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11232	     20	   1660	  12912	   3270	PWM_TIM_DAC.elf
+Finished building: default.size.stdout
+ 
+
+11:07:07 Build Finished. 0 errors, 0 warnings. (took 470ms)
+

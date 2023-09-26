@@ -1,0 +1,44 @@
+14:12:14 **** Incremental Build of configuration Debug for project ADC_Sin ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/arm_sin_f32.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/arm_sin_f32.d" -MT"Core/Src/arm_sin_f32.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/arm_sin_f32.o"
+In file included from ../Core/Inc/ARMCM4.h:129,
+                 from ../Core/Inc/arm_math.h:288,
+                 from ../Core/Src/arm_sin_f32.c:41:
+../Drivers/CMSIS/Include/core_cm4.h:105:8: error: #error "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+  105 |       #error "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+      |        ^~~~~
+In file included from ../Core/Inc/arm_math.h:288,
+                 from ../Core/Src/arm_sin_f32.c:41:
+../Core/Inc/ARMCM4.h:143:3: error: unknown type name '__IM'
+  143 |   __IM  uint32_t ID;              /* Offset: 0x000 (R/ )  Board and FPGA Identifier */
+      |   ^~~~
+../Core/Inc/ARMCM4.h:143:18: error: expected ':', ',', ';', '}' or '__attribute__' before 'ID'
+  143 |   __IM  uint32_t ID;              /* Offset: 0x000 (R/ )  Board and FPGA Identifier */
+      |                  ^~
+../Core/Inc/ARMCM4.h:164:3: error: unknown type name '__IM'
+  164 |   __IM  uint32_t ID;              /* Offset: 0x000 (R/ )  Board and FPGA Identifier */
+      |   ^~~~
+../Core/Inc/ARMCM4.h:164:18: error: expected ':', ',', ';', '}' or '__attribute__' before 'ID'
+  164 |   __IM  uint32_t ID;              /* Offset: 0x000 (R/ )  Board and FPGA Identifier */
+      |                  ^~
+../Core/Inc/ARMCM4.h:179:3: error: unknown type name '__IOM'
+  179 |   __IOM uint32_t Timer1Load;      /* Offset: 0x000 (R/W)  Timer 1 Load */
+      |   ^~~~~
+../Core/Inc/ARMCM4.h:179:18: error: expected ':', ',', ';', '}' or '__attribute__' before 'Timer1Load'
+  179 |   __IOM uint32_t Timer1Load;      /* Offset: 0x000 (R/W)  Timer 1 Load */
+      |                  ^~~~~~~~~~
+../Core/Inc/ARMCM4.h:202:3: error: unknown type name '__IOM'
+  202 |   __IOM uint32_t DR;              /* Offset: 0x000 (R/W)  Data */
+      |   ^~~~~
+../Core/Inc/ARMCM4.h:202:18: error: expected ':', ',', ';', '}' or '__attribute__' before 'DR'
+  202 |   __IOM uint32_t DR;              /* Offset: 0x000 (R/W)  Data */
+      |                  ^~
+In file included from ../Core/Src/arm_sin_f32.c:41:
+../Core/Inc/arm_math.h:289:2: warning: #warning "Define either ARM_MATH_CM4 OR ARM_MATH_CM3...By Default building on ARM_MATH_CM4....." [-Wcpp]
+  289 | #warning "Define either ARM_MATH_CM4 OR ARM_MATH_CM3...By Default building on ARM_MATH_CM4....."
+      |  ^~~~~~~
+make: *** [Core/Src/subdir.mk:37: Core/Src/arm_sin_f32.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+
+14:12:15 Build Failed. 10 errors, 1 warnings. (took 880ms)
+
